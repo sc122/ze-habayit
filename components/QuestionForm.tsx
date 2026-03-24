@@ -8,13 +8,13 @@ import { Button } from "@/components/ui/button";
 type Phase = "form" | "submitting" | "done" | "error";
 
 const PLACEHOLDER =
-  "שאל/י כאילו הוא/היא חבר/ה שלך — בשפה חופשית, בלי להתנצל...";
+  "שאל/י כאילו הוא/היא חבר/ה שלך — בשפה חופשית...";
 
 const EXAMPLE_PROMPTS = [
-  "איך מגישים בקשה לקצבת נכות?",
-  "מה הזכויות שלי אם פוטרתי?",
-  "איפה אפשר לקבל עזרה עם שכר דירה?",
-  "מה עושים כשהבנק מסרב?",
+  "עד מתי הכלבו פתוח היום?",
+  "למי אפשר לפנות בנושא רכבים בקיבוץ?",
+  "מה הזכויות שלי בתור חבר קיבוץ סעד?",
+  "מתי השער הישן נפתח?"
 ];
 
 export default function QuestionForm() {
@@ -96,7 +96,7 @@ export default function QuestionForm() {
           </h1>
         </div>
         <p className="text-muted-foreground text-base max-w-sm mx-auto leading-relaxed">
-          קהילת הסעד שלך — אנשים שעברו את זה ויודעים את הדרך
+          קהילת סעד
         </p>
       </motion.div>
 
@@ -130,10 +130,10 @@ export default function QuestionForm() {
             </div>
             <div>
               <p className="font-semibold text-sm text-foreground">
-                החבר שלך בזה הבית
+                החבר שלך בקבוצת "סעד זה הבית"
               </p>
               <p className="text-xs text-muted-foreground">
-                יודע הכל • כאן בשבילך • ללא שיפוטיות
+                יודע הכל • כאן בשבילך • תמיד זמין
               </p>
             </div>
             <div className="mr-auto flex items-center gap-1">
@@ -158,7 +158,7 @@ export default function QuestionForm() {
                   </p>
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     אם היה לך חבר שיודע את כל התשובות בנושא סעד — בשפה
-                    חופשית, בלי טפסים, בלי שמות תפקידים — מה היית שואל/ת?
+                    חופשית, עם תשובות מיידיות ועם מענה מדויק לשאלות — מה היית שואל/ת?
                   </p>
                 </div>
 
@@ -240,11 +240,11 @@ export default function QuestionForm() {
                     style={
                       canSubmit
                         ? {
-                            background:
-                              "linear-gradient(135deg, oklch(0.72 0.15 185) 0%, oklch(0.65 0.18 200) 100%)",
-                            color: "oklch(0.1 0.01 240)",
-                            boxShadow: "0 4px 20px oklch(0.72 0.15 185 / 0.35)",
-                          }
+                          background:
+                            "linear-gradient(135deg, oklch(0.72 0.15 185) 0%, oklch(0.65 0.18 200) 100%)",
+                          color: "oklch(0.1 0.01 240)",
+                          boxShadow: "0 4px 20px oklch(0.72 0.15 185 / 0.35)",
+                        }
                         : {}
                     }
                   >
@@ -300,10 +300,10 @@ export default function QuestionForm() {
                   תודה רבה!
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-2">
-                  קיבלנו את השאלה שלך.
+                  השאלה שלך התקבלה בהצלחה!.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-7">
-                  נחזור אליך בהקדם עם כל המידע שצריך 🤝
+                  ניתן למלא שוב עם שאלות נוספות🤝
                 </p>
                 <button
                   onClick={() => {
@@ -328,7 +328,7 @@ export default function QuestionForm() {
         transition={{ delay: 0.8 }}
         className="mt-8 text-xs text-muted-foreground/50 text-center"
       >
-        המידע שתשתף/י ישמש לשיפור השירות בלבד
+        המידע שתשתף/י ישמש את חברי הקיבוץ לבניית פיתרון משמעותי עבור כולנו
       </motion.p>
     </div>
   );
